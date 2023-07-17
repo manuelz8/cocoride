@@ -45,7 +45,7 @@ body {
 
 .main-header {
   min-height: 100vh;
-  background: url(img/background.png);
+  background: url(../img/background.png);
   background-size: cover;
   display: flex;
 }
