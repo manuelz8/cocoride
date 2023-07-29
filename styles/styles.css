@@ -4,6 +4,14 @@
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   color: black;
@@ -24,9 +32,11 @@ body {
   width: 100%;
 }
 .main-menu .logo-container {
-  max-width: 100px;
+  display: flex;
+  align-items: center;
 }
 .main-menu .logo-container img {
+  max-width: 100px;
   width: 100%;
 }
 .main-menu-nav a {
@@ -48,6 +58,7 @@ body {
   background: url(../img/background.png);
   background-size: cover;
   display: flex;
+  padding-top: 150px;
 }
 .main-header .container {
   display: flex;
@@ -72,7 +83,7 @@ body {
   margin-left: auto;
   padding-bottom: 10%;
 }
-.main-header .main-text h2 {
+.main-header .main-text .slogan {
   text-align: left;
   width: 100%;
 }
@@ -98,7 +109,13 @@ body {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 35px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.fixed-word, .changing-word {
+  font-size: 50px;
   margin-bottom: 20px;
   margin-top: 0;
 }
@@ -152,7 +169,7 @@ h2 {
 }
 
 .servicios {
-  padding: 80px 0;
+  padding: 80px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,6 +190,7 @@ h2 {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 40px;
 }
 .servicios .container .servicio-item img {
   max-width: 200px;
@@ -183,8 +201,144 @@ h2 {
   margin: 0;
   line-height: 1;
   margin-top: 20px;
+  color: #3A388A;
 }
 
 .section-heading {
   font-size: 35px;
+}
+
+.mobile-icon {
+  display: none;
+}
+
+.yellow-text {
+  color: #FCD013;
+}
+
+footer {
+  background-color: #F5F8FF;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 80px 20px;
+}
+footer .container .container-column {
+  width: 33%;
+  margin: 0 20px;
+  font-size: 18px;
+}
+footer .container .container-column p {
+  color: #3A388A;
+  margin: 10px 0;
+}
+footer .container .container-column a {
+  color: #3A388A;
+  font-size: 18px;
+}
+footer .container .container-column .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+footer .container .container-column .contact-item span {
+  margin-right: 10px;
+  color: #3A388A;
+}
+footer .container .container-column .address {
+  display: flex;
+  align-items: center;
+}
+footer .container .container-column .address img {
+  margin-left: 10px;
+  width: 35px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
+}
+
+@media screen and (max-width: 1080px) {
+  .main-header {
+    padding-top: 0;
+    background-position: center;
+  }
+  .main-header .container {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    position: relative;
+  }
+  .main-header .container .main-text {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .main-header .container .main-icon {
+    display: none;
+  }
+  .main-header .container .button {
+    display: none;
+  }
+  .main-header .mobile-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    animation: floatAnimation 4s ease-in-out infinite;
+  }
+  .main-header .mobile-icon img {
+    width: 100px;
+  }
+  .main-header .mobile-icon p {
+    margin: 0;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .fixed-word, .changing-word {
+    font-size: 35px;
+  }
+  .button {
+    margin-top: 0;
+  }
+  .servicios .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .servicios .container .servicio-item h3 {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .fixed-word, .changing-word {
+    font-size: 30px;
+  }
+  footer .container .container-column {
+    width: 100%;
+  }
+}
+.whatsapp-link {
+  height: 90px;
+  width: 90px;
+  display: flex;
+  background-color: #25CC64;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-link img {
+  width: 80%;
+  border-radius: 50%;
 }/*# sourceMappingURL=styles.css.map */
